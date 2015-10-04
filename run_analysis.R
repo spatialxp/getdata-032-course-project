@@ -43,5 +43,5 @@ obsData <- obsData[c(1,68,2:67)]
 # Export averages as CSV
 
 dt <- data.table(obsData)
-avData <- dt[,lapply(.SD,mean),by="Activity,Subject"]
-write.table(avData,file="averages.txt",sep=",",row.names = FALSE)
+avData <- dt[, lapply(.SD,mean), by = "Activity,Subject"]
+write.table(avData, file = "averages.txt", sep = ",", row.names = FALSE)
