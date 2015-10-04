@@ -4,8 +4,8 @@ library(data.table)
 
 getData <- function(name, colNames) {
   d <- read.table(gsub("name", name, "UCI HAR Dataset/name/X_name.txt"), col.names=colNames)
-  a  <- read.table(gsub("name", name, "UCI HAR Dataset/name/Y_name.txt"))
-  s  <- read.table(gsub("name", name, "UCI HAR Dataset/name/subject_name.txt"))
+  a <- read.table(gsub("name", name, "UCI HAR Dataset/name/Y_name.txt"))
+  s <- read.table(gsub("name", name, "UCI HAR Dataset/name/subject_name.txt"))
   d$Activity <- a[,1]
   d$Subject <- s[,1]
   d <- d[, append(c("Activity", "Subject"), head(colnames(d), 561))]
