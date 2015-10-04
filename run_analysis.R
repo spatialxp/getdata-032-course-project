@@ -25,7 +25,7 @@ unzip("uci_har_dataset.zip")
 colNames <- read.table("UCI HAR Dataset/features.txt")[,2]
 train <- getData("train", colNames)
 test <- getData("test", colNames)
-obsData = merge(train, test, all = TRUE, sort = FALSE)
+obsData <- merge(train, test, all = TRUE, sort = FALSE)
 
 # Create clean data
 
