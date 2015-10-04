@@ -5,7 +5,7 @@ This project contains the following items:
 -	CodeBook.md
 -	Run_analysis.R
 -	Averages.txt
--	
+	
 ##CodeBook.md
 This is the code book describing the source data variables.
 
